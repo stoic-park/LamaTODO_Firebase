@@ -1,3 +1,24 @@
-.todolist {
-  text-align: center;
+.todolist-entry {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-inputbox {
+  flex: 5;
+}
+
+.update-button {
+  flex: 1;
+}
+
+.delete-button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button :hover {
+  opacity: 0.4;
+  padding: 6px 8px;
 }

@@ -64,46 +64,55 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lama TODO?</h1>
-      <form>
-        {/* <input
+      <div className="appContainer">
+        <div className="appTitle">
+          <h1>Lama TODO?</h1>
+        </div>
+
+        <form className="appInput">
+          {/* <input
           value={input}
           onChange={(event) => {
             setInput(event.target.value);
           }}
         /> */}
 
-        <FormControl>
-          <InputLabel>입력하시오..!</InputLabel>
-          <Input
-            value={input}
-            onChange={(event) => {
-              setInput(event.target.value);
-            }}
-          />
-        </FormControl>
+          <FormControl>
+            <InputLabel>입력하시오..!</InputLabel>
+            <Input
+              value={input}
+              onChange={(event) => {
+                setInput(event.target.value);
+              }}
+            />
+          </FormControl>
 
-        {/* <button type="submit" onClick={addTodo}>
+          {/* <button type="submit" onClick={addTodo}>
           add
         </button> */}
-        <Button
-          disabled={!input} //! 인풋값이 없을 경우 기능이 작동하지 않도록!
-          type="submit"
-          onClick={addTodo}
-          variant="contained"
-          color="primary"
-        >
-          add
-        </Button>
-      </form>
+          <div className="add-button">
+            <Button
+              disabled={!input} //! 인풋값이 없을 경우 기능이 작동하지 않도록!
+              type="submit"
+              onClick={addTodo}
+              variant="contained"
+              color="primary"
+            >
+              add
+            </Button>
+          </div>
+        </form>
 
-      <ul>
-        {/* map 사용해서 todo 뿌리기 */}
-        {todos.map((todo) => (
-          // <li>{todo}</li>
-          <Todo todo={todo} />
-        ))}
-      </ul>
+        <div className="todoList">
+          <ul>
+            {/* map 사용해서 todo 뿌리기 */}
+            {todos.map((todo) => (
+              // <li>{todo}</li>
+              <Todo todo={todo} />
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

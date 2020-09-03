@@ -67,8 +67,8 @@ function Todo(props) {
         </div>
       </Modal>
 
-      <List className="todolist">
-        <ListItem>
+      <List className="todolist-entry">
+        <ListItem className="todo-inputbox">
           <ListItemAvatar>
             {/* <Avatar>
             <ImageIcon />
@@ -80,12 +80,16 @@ function Todo(props) {
             // secondary="마감 기한"
           ></ListItemText>
         </ListItem>
-        <Button onClick={(e) => setOpen(true)}>수정</Button>
-        <DeleteForeverIcon
-          onClick={(event) =>
-            db.collection("todos").doc(props.todo.id).delete()
-          }
-        />
+        <Button className="update-button" onClick={(e) => setOpen(true)}>
+          수정
+        </Button>
+        <div className="delete-button">
+          <DeleteForeverIcon
+            onClick={(event) =>
+              db.collection("todos").doc(props.todo.id).delete()
+            }
+          />
+        </div>
       </List>
     </>
   );
