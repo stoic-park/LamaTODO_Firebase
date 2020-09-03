@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lama TODO🚀?</h1>
+      <h1>Lama TODO?</h1>
       <form>
         {/* <input
           value={input}
